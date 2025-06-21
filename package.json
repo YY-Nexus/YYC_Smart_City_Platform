@@ -1,12 +1,13 @@
 {
-  "name": "yanyu-tongcheng",
+  "name": "yanyu-smart-city",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
@@ -29,11 +30,11 @@
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "autoprefixer": "^10",
-    "eslint": "^8",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.51.0",
     "eslint-config-next": "14.0.0",
     "postcss": "^8.5",
-    "tailwindcss": "^3",
+    "tailwindcss": "^3.3.5",
     "typescript": "^5"
   }
 }

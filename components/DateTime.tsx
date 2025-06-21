@@ -1,9 +1,14 @@
 "use client"
 
+import type React from "react"
+
 import { useState, useEffect } from "react"
 import { Calendar, X, Gift, Star, Settings } from "lucide-react"
 import { ModernCard, ModernCardHeader, ModernCardContent } from "@/components/ModernCard"
 import { ModernButton } from "@/components/ModernButton"
+
+// 在文件顶部添加类型定义
+type FestivalKey = keyof typeof festivals
 
 const chineseMonths = ["正月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "冬月", "腊月"]
 const chineseDays = [
@@ -151,9 +156,10 @@ export function DateTime() {
     return `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`
   }
 
+  // 修复getFestival函数的类型
   const getFestival = (year: number, month: number, day: number) => {
     const dateKey = formatDateKey(year, month, day)
-    return festivals[dateKey as keyof typeof festivals]
+    return festivals[dateKey as FestivalKey]
   }
 
   const getBirthday = (month: number, day: number) => {
@@ -179,6 +185,17 @@ export function DateTime() {
     }
   }
 
+  // 确保事件处理函数的类型正确
+  const handleSettingsClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation()
+    setShowSettings(!showSettings)
+  }
+
+  const handleTimeFormatClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation()
+    toggleTimeFormat()
+  }
+
   return (
     <>
       <div className="text-right cursor-pointer relative" onClick={() => setShowCalendar(true)}>
@@ -193,10 +210,7 @@ export function DateTime() {
 
         {/* 设置按钮 */}
         <button
-          onClick={(e) => {
-            e.stopPropagation()
-            setShowSettings(!showSettings)
-          }}
+          onClick={handleSettingsClick}
           className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-blue-100 hover:bg-blue-200 flex items-center justify-center transition-colors"
         >
           <Settings className="h-3 w-3 text-blue-600" />
@@ -209,10 +223,7 @@ export function DateTime() {
               <div className="text-sm font-medium text-gray-700">时间格式</div>
               <div className="flex items-center gap-2">
                 <button
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    toggleTimeFormat()
-                  }}
+                  onClick={handleTimeFormatClick}
                   className={`px-3 py-1 rounded text-xs transition-colors ${
                     is24Hour ? "bg-blue-500 text-white" : "bg-gray-100 text-gray-600"
                   }`}
@@ -220,10 +231,7 @@ export function DateTime() {
                   24小时制
                 </button>
                 <button
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    toggleTimeFormat()
-                  }}
+                  onClick={handleTimeFormatClick}
                   className={`px-3 py-1 rounded text-xs transition-colors ${
                     !is24Hour ? "bg-blue-500 text-white" : "bg-gray-100 text-gray-600"
                   }`}
