@@ -83,7 +83,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <ModernNavigation />
       <CityVoiceBroadcast />
       <XiaoYuAssistant />
@@ -106,37 +106,41 @@ export default function HomePage() {
         {/* 搜索区域 */}
         <div className="mb-8">
           <ModernCard className="max-w-2xl mx-auto">
-            <ModernInput
-              placeholder="智能搜索：告诉我您需要什么服务..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              icon={<Search className="h-5 w-5" />}
-              rightIcon={
-                <ModernButton size="sm" className="!p-2">
-                  搜索
-                </ModernButton>
-              }
-              className="text-lg py-4"
-            />
-            <div className="text-center mt-2">
-              <span className="text-xs text-gray-500">💡 试试问小语："附近有什么好吃的？" 或 "今天天气怎么样？"</span>
-            </div>
+            <ModernCardContent>
+              <ModernInput
+                placeholder="智能搜索：告诉我您需要什么服务..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                icon={<Search className="h-5 w-5" />}
+                rightIcon={
+                  <ModernButton size="sm" className="!p-2">
+                    搜索
+                  </ModernButton>
+                }
+                className="text-lg py-4"
+              />
+              <div className="text-center mt-2">
+                <span className="text-xs text-gray-500">💡 试试问小语："附近有什么好吃的？" 或 "今天天气怎么样？"</span>
+              </div>
+            </ModernCardContent>
           </ModernCard>
         </div>
 
         {/* 统计数据 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {statsData.map((stat, index) => (
-            <ModernCard key={index} className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 text-white">
-                {stat.icon}
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-1">{stat.value}</h3>
-              <p className="text-sm text-gray-600 mb-2">{stat.title}</p>
-              <div className="flex items-center justify-center text-sm text-green-600">
-                <TrendingUp className="h-4 w-4 mr-1" />
-                {stat.change}
-              </div>
+            <ModernCard key={index} className="text-center hover:shadow-xl transition-shadow">
+              <ModernCardContent>
+                <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 text-white">
+                  {stat.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-1">{stat.value}</h3>
+                <p className="text-sm text-gray-600 mb-2">{stat.title}</p>
+                <div className="flex items-center justify-center text-sm text-green-600">
+                  <TrendingUp className="h-4 w-4 mr-1" />
+                  {stat.change}
+                </div>
+              </ModernCardContent>
             </ModernCard>
           ))}
         </div>
@@ -146,14 +150,10 @@ export default function HomePage() {
           <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">热门服务分类</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {serviceCategories.map((category) => (
-              <ModernCard key={category.id} className="text-center group">
-                <ModernCardHeader
-                  title={category.title}
-                  description={category.description}
-                  icon={category.icon}
-                  className="justify-center text-center"
-                />
+              <ModernCard key={category.id} className="text-center group hover:shadow-xl transition-all">
+                <ModernCardHeader title={category.title} icon={category.icon} className="justify-center text-center" />
                 <ModernCardContent>
+                  <p className="text-gray-600 mb-4">{category.description}</p>
                   <div className="space-y-2">
                     {category.services.map((service, index) => (
                       <div
@@ -179,8 +179,9 @@ export default function HomePage() {
 
         {/* 快捷操作 */}
         <ModernCard>
-          <ModernCardHeader title="快捷操作" description="一键访问常用功能" icon={<Zap className="h-5 w-5" />} />
+          <ModernCardHeader title="快捷操作" icon={<Zap className="h-5 w-5" />} />
           <ModernCardContent>
+            <p className="text-gray-600 mb-4">一键访问常用功能</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { label: "紧急服务", icon: "🚨", urgent: true },

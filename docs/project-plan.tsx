@@ -53,7 +53,7 @@ export function ProjectPlan() {
                 <Clock className="h-4 w-4" />
                 时间：2025年6月21日 - 7月15日（25天）
               </div>
-              
+
               <div className="space-y-3">
                 <div className="p-3 bg-blue-50 rounded-lg">
                   <h4 className="font-medium text-blue-900">核心功能开发</h4>
@@ -64,7 +64,7 @@ export function ProjectPlan() {
                     <li>• 语音识别与合成准备</li>
                   </ul>
                 </div>
-                
+
                 <div className="p-3 bg-green-50 rounded-lg">
                   <h4 className="font-medium text-green-900">技术集成</h4>
                   <ul className="text-sm text-green-700 mt-1 space-y-1">
@@ -98,7 +98,7 @@ export function ProjectPlan() {
                 <Clock className="h-4 w-4" />
                 时间：2025年7月16日 - 8月31日（47天）
               </div>
-              
+
               <div className="space-y-3">
                 <div className="p-3 bg-purple-50 rounded-lg">
                   <h4 className="font-medium text-purple-900">AI能力增强</h4>
@@ -109,7 +109,7 @@ export function ProjectPlan() {
                     <li>• 个性化学习算法</li>
                   </ul>
                 </div>
-                
+
                 <div className="p-3 bg-orange-50 rounded-lg">
                   <h4 className="font-medium text-orange-900">地图服务深度集成</h4>
                   <ul className="text-sm text-orange-700 mt-1 space-y-1">
@@ -142,7 +142,7 @@ export function ProjectPlan() {
                 <Clock className="h-4 w-4" />
                 时间：2025年9月1日 - 10月15日（45天）
               </div>
-              
+
               <div className="space-y-3">
                 <div className="p-3 bg-green-50 rounded-lg">
                   <h4 className="font-medium text-green-900">服务生态建设</h4>
@@ -153,7 +153,7 @@ export function ProjectPlan() {
                     <li>• 紧急救助快速响应</li>
                   </ul>
                 </div>
-                
+
                 <div className="p-3 bg-yellow-50 rounded-lg">
                   <h4 className="font-medium text-yellow-900">智能推荐引擎</h4>
                   <ul className="text-sm text-yellow-700 mt-1 space-y-1">
@@ -186,7 +186,7 @@ export function ProjectPlan() {
                 <Clock className="h-4 w-4" />
                 时间：2025年10月16日 - 12月31日（77天）
               </div>
-              
+
               <div className="space-y-3">
                 <div className="p-3 bg-red-50 rounded-lg">
                   <h4 className="font-medium text-red-900">正式发布</h4>
@@ -197,7 +197,7 @@ export function ProjectPlan() {
                     <li>• 监控与日志系统</li>
                   </ul>
                 </div>
-                
+
                 <div className="p-3 bg-indigo-50 rounded-lg">
                   <h4 className="font-medium text-indigo-900">运营推广</h4>
                   <ul className="text-sm text-indigo-700 mt-1 space-y-1">
@@ -212,9 +212,9 @@ export function ProjectPlan() {
               <div className="border-t pt-3">
                 <h4 className="font-medium mb-2">成功指标</h4>
                 <div className="space-y-1 text-sm">
-                  <div>• 用户满意度 > 90%</div>
-                  <div>• 日活跃用户 > 1000人</div>
-                  <div>• 响应时间 < 2秒</div>
+                  <div>• 用户满意度 {">"} 90%</div>
+                  <div>• 日活跃用户 {">"} 1000人</div>
+                  <div>• 响应时间 {"<"} 2秒</div>
                 </div>
               </div>
             </div>
@@ -233,12 +233,12 @@ export function ProjectPlan() {
                 <li>• 模型选择：Llama 2/ChatGLM-6B</li>
                 <li>• 部署方案：Docker容器化</li>
                 <li>• 硬件要求：16GB RAM + GPU</li>
-                <li>• 响应时间：< 2秒</li>
+                <li>• 响应时间：{"<"} 2秒</li>
                 <li>• 离线运行：支持断网使用</li>
                 <li>• 数据安全：本地处理，不上传</li>
               </ul>
             </div>
-            
+
             <div>
               <h3 className="font-semibold mb-3 text-blue-600">百度地图深度集成</h3>
               <ul className="space-y-2 text-sm text-gray-700">
@@ -284,7 +284,7 @@ export function ProjectPlan() {
                 </div>
               </div>
             </div>
-            
+
             <div>
               <h3 className="font-semibold mb-3 text-blue-600">业务风险</h3>
               <div className="space-y-3">

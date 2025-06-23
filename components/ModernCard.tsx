@@ -1,24 +1,9 @@
-"use client"
-
 import type { ReactNode } from "react"
+import { cn } from "@/lib/utils"
 
 interface ModernCardProps {
   children: ReactNode
   className?: string
-  hover?: boolean
-  padding?: "sm" | "md" | "lg"
-}
-
-export function ModernCard({ children, className = "", hover = true, padding = "md" }: ModernCardProps) {
-  const paddingMap = {
-    sm: "p-4",
-    md: "p-6",
-    lg: "p-8",
-  }
-
-  return (
-    <div className={`cube-card ${paddingMap[padding]} ${hover ? "cursor-pointer" : ""} ${className}`}>{children}</div>
-  )
 }
 
 interface ModernCardHeaderProps {
@@ -28,26 +13,47 @@ interface ModernCardHeaderProps {
   className?: string
 }
 
-export function ModernCardHeader({ title, description, icon, className = "" }: ModernCardHeaderProps) {
+interface ModernCardContentProps {
+  children: ReactNode
+  className?: string
+}
+
+interface ModernCardFooterProps {
+  children: ReactNode
+  className?: string
+}
+
+export function ModernCard({ children, className }: ModernCardProps) {
   return (
-    <div className={`flex items-start gap-3 mb-4 ${className}`}>
-      {icon && (
-        <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white">
-          {icon}
-        </div>
+    <div
+      className={cn(
+        "bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow",
+        className,
       )}
-      <div>
-        <h3 className="text-lg font-semibold text-gray-800 mb-1">{title}</h3>
-        {description && <p className="text-sm text-gray-600">{description}</p>}
+    >
+      {children}
+    </div>
+  )
+}
+
+export function ModernCardHeader({ title, description, icon, className }: ModernCardHeaderProps) {
+  return (
+    <div className={cn("px-6 py-4 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white", className)}>
+      <div className="flex items-center gap-3">
+        {icon && <div className="p-2 bg-blue-100 rounded-lg text-blue-600">{icon}</div>}
+        <div>
+          <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
+          {description && <p className="text-sm text-gray-600 mt-1">{description}</p>}
+        </div>
       </div>
     </div>
   )
 }
 
-export function ModernCardContent({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`text-gray-700 ${className}`}>{children}</div>
+export function ModernCardContent({ children, className }: ModernCardContentProps) {
+  return <div className={cn("p-6", className)}>{children}</div>
 }
 
-export function ModernCardFooter({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`mt-4 pt-4 border-t border-blue-100 ${className}`}>{children}</div>
+export function ModernCardFooter({ children, className }: ModernCardFooterProps) {
+  return <div className={cn("px-6 py-4 border-t border-gray-100 bg-gray-50", className)}>{children}</div>
 }
