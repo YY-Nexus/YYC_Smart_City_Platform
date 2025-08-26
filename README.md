@@ -1,15 +1,15 @@
-# 🏠 智慧生活管家 - "小语"多维智能服务平台
+# 🏠 YYC³ 智慧城市服务平台  ❤️  "小语"多维智能助手  ❤️
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.0-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-> 🤖 **"小语"** - 您的专属智能生活管家，让科技更有温度，让生活更加便捷！
+> 🤖 **"小语"** - 您的专属多维智能助手，让智能贴近生活，让科技更有温度！
 
 ## 📖 项目简介
 
-智慧生活管家是一个基于 Next.js 15 构建的现代化智能服务平台，集成了本地大模型AI助手"小语"，为用户提供全方位的智慧生活服务。平台以拟人化交互为核心，结合百度地图、本地大模型等技术，打造24/7贴心智能服务体验。
+YYC³智慧城市服务平台是一个基于 Next.js 15 构建的现代化智能服务平台，集成了本地大模型AI助手❤️"小语"，为用户提供全方位的智慧生活服务。平台以拟人化交互为核心，结合百度地图、本地大模型等技术，打造24/7贴心智能服务体验。
 
 ### 🎯 核心理念
 - **拟人化思维** - AI助手具备情感表达和温暖交流
@@ -83,7 +83,7 @@
 
 1. **克隆项目**
 \`\`\`bash
-git clone https://github.com/your-username/smart-life-assistant.git
+git clone [https://github.com/YY-Nexus/YYC_Smart_City_Platform.git]
 cd smart-life-assistant
 \`\`\`
 
@@ -252,6 +252,8 @@ smart-life-assistant/
 <div align="center">
 
 **🌟 如果这个项目对您有帮助，请给我们一个 Star！🌟**
+
+万象归源于云枢丨深栈智启新纪元
 
 Made with ❤️ by YanYu Team
 
