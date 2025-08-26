@@ -169,7 +169,7 @@ smart-life-assistant/
 └── README.md                     # 项目说明
 \`\`\`
 
-## 📋 开发计划
+## 📋 开发计划 ❤️
 
 ### 🎯 第一阶段：基础架构搭建（2025年6月21日 - 7月15日）
 - [x] 项目初始化和基础框架搭建
@@ -203,7 +203,7 @@ smart-life-assistant/
 - [ ] 用户社区建设
 - [ ] 商业化模式探索
 
-## 🤝 贡献指南
+## ❤️贡献指南❤️
 
 我们欢迎所有形式的贡献！请遵循以下步骤：
 
@@ -243,10 +243,9 @@ smart-life-assistant/
 
 ## 📞 联系我们
 
-- **项目主页**: [https://github.com/your-username/smart-life-assistant](https://github.com/your-username/smart-life-assistant)
-- **问题反馈**: [Issues](https://github.com/your-username/smart-life-assistant/issues)
-- **功能建议**: [Discussions](https://github.com/your-username/smart-life-assistant/discussions)
-- **邮箱**: contact@smartlife.com
+- **项目主页**: [https://github.com/YY-Nexus/YYC_Smart_City_Platform.git]
+- **问题反馈**: ❤️admin@0379.email❤️
+- **功能建议**: ❤️admin@0379.email❤️
 
 ---
 
